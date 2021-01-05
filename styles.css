@@ -15,24 +15,40 @@ main {
 
 .samary {
   display:grid;
-  grid-templete-rows:150px 150px;
+  grid-templete-rows:50px 50px 50px 50px 50px;
   grid-templete-columns:150px 150px;
-}
-
-.key {
-  background:rgba( 200,0,0,0.2);
-  width:200px;
+  grid-templete-areas:
+    "area1 area2"
+    "area3 area4"
+    "area5 area6"
+    "area7 area7"
+    "area8 area8"
+    ;
   
 }
 
-.value {
+.pic-key {
+  grid-area:area1;
+  background:rgba( 200,0,0,0.2);
+}
+.pic-value {
+    grid-area:area2;
    background:rgba( 0,100,0,0.2);
 }
-
+.pic-key {
+  grid-area:area1;
+  background:rgba( 200,0,0,0.2);
+}
+.pic-value {
+    grid-area:area2;
+   background:rgba( 0,100,0,0.2);
+}
 .notes {
+  grid-area:area7;
    background:rgba( 0,0,0,0.2);
 }
 
 .notes_text {
+  grid-area: area8;
    background:rgba( 0,0,100,0.2);
 }
