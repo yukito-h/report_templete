@@ -3,30 +3,48 @@
   padding:0;
 }
 
+body {
+  /*A4プリント */
+  width: 172mm;
+  height:251mm;
+  page-break-after:always;
+
+}
+header {
+  font-weight:bold;
+  text-decoration: underline;
+
+}
 main {
-  display : flex;
+  /* display : flex; */
+  /* margin-bottom: 20px;; */
 }
 
+
+.samary {
+  display:grid;
+  text-align: center;
+  line-height: 2rem;
+  grid-template-columns:400px
+  5px 150px 150px;
+  grid-template-rows:50px 50px 50px 50px 1fr 5px;
+  grid-template-areas:
+  "area0 .... area1 area2"
+  "area0 .... area3 area4"
+  "area0 .... area5 area6"
+  "area0 .... area7 area7"
+  "area0 .... area8 area8"
+  "....  .... ....  .... "
+  ;
+  
+}
 .img{
+  grid-area: area0;
   background:#eee;
   width:400px;
   height:300px;
 }
 
-.samary {
-  display:grid;
-  grid-templete-rows:50px 50px 50px 50px 50px;
-  grid-templete-columns:150px 150px;
-  grid-templete-areas:
-    "area1 area2"
-    "area3 area4"
-    "area5 area6"
-    "area7 area7"
-    "area8 area8"
-    ;
-  
-}
-
 .pic-key {
   grid-area:area1;
   background:rgba( 200,0,0,0.2);
@@ -35,13 +53,21 @@ main {
     grid-area:area2;
    background:rgba( 0,100,0,0.2);
 }
-.pic-key {
-  grid-area:area1;
+.date-key {
+  grid-area:area3;
   background:rgba( 200,0,0,0.2);
 }
-.pic-value {
-    grid-area:area2;
+.date-value {
+    grid-area: area4;
    background:rgba( 0,100,0,0.2);
+}
+.locate-key {
+  grid-area:area5;
+  background:rgba(195, 39, 39, 0.2);
+}
+.locate-value {
+    grid-area:area6;
+   background:rgba(26, 150, 26, 0.2);
 }
 .notes {
   grid-area:area7;
