@@ -1,20 +1,23 @@
 * {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   /*A4プリント */
   width: 172mm;
-  height:251mm;
-  page-break-after:always;
+  height: 251mm;
+  page-break-after: always;
 
 }
+
 header {
-  font-weight:bold;
+  font-weight: bold;
   text-decoration: underline;
 
 }
+
 main {
   /* display : flex; */
   /* margin-bottom: 20px;; */
@@ -22,59 +25,76 @@ main {
 
 
 .samary {
-  display:grid;
+  display: grid;
   text-align: center;
   line-height: 2rem;
-  grid-template-columns:400px
-  5px 150px 150px;
-  grid-template-rows:50px 50px 50px 50px 1fr 5px;
+  grid-template-columns: 400px 5px 150px 150px;
+  grid-template-rows: 40px 40px 40px 40px 1fr 5px;
   grid-template-areas:
-  "area0 .... area1 area2"
-  "area0 .... area3 area4"
-  "area0 .... area5 area6"
-  "area0 .... area7 area7"
-  "area0 .... area8 area8"
-  "....  .... ....  .... "
+    "area0 .... area1 area2"
+    "area0 .... area3 area4"
+    "area0 .... area5 area6"
+    "area0 .... area7 area7"
+    "area0 .... area8 area8"
+    "....  .... ....  .... "
   ;
-  
+
 }
-.img{
+
+.img {
   grid-area: area0;
-  background:#eee;
-  width:400px;
-  height:300px;
+  background: #eee;
+  width: 400px;
+  height: 300px;
+  border:1px solid #000;
 }
 
 .pic-key {
-  grid-area:area1;
-  background:rgba( 200,0,0,0.2);
+  border: 1px solid #000;
+  grid-area: area1;
+  background: rgba(200, 0, 0, 0.2);
 }
+
 .pic-value {
-    grid-area:area2;
-   background:rgba( 0,100,0,0.2);
+  border: 1px solid #000;
+  grid-area: area2;
+  background: rgba(0, 100, 0, 0.2);
 }
+
 .date-key {
-  grid-area:area3;
-  background:rgba( 200,0,0,0.2);
+  border: 1px solid #000;
+  grid-area: area3;
+  background: rgba(200, 0, 0, 0.2);
 }
+
 .date-value {
-    grid-area: area4;
-   background:rgba( 0,100,0,0.2);
+  border: 1px solid #000;
+  grid-area: area4;
+  background: rgba(0, 100, 0, 0.2);
 }
+
 .locate-key {
-  grid-area:area5;
-  background:rgba(195, 39, 39, 0.2);
+  border: 1px solid #000;
+  grid-area: area5;
+  background: rgba(195, 39, 39, 0.2);
 }
+
 .locate-value {
-    grid-area:area6;
-   background:rgba(26, 150, 26, 0.2);
+  border: 1px solid #000;
+  grid-area: area6;
+  background: rgba(26, 150, 26, 0.2);
 }
+
 .notes {
-  grid-area:area7;
-   background:rgba( 0,0,0,0.2);
+  border: 1px solid #000;
+  text-align: start;
+  grid-area: area7;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .notes_text {
+  border: 1px solid #000;
   grid-area: area8;
-   background:rgba( 0,0,100,0.2);
+  background: rgba(0, 0, 100, 0.2);
+  overflow-wrap: break-word;
 }
