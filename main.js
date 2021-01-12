@@ -5,6 +5,10 @@ const hDate = document.getElementById('header_date')
 
 const samary = document.querySelector(".samary");
 const main = document.querySelector('main');
+const img = document.querySelector('input');
+const prev = document.querySelector('#preview');
+
+
 
 //1set 追加する関数
 function addSamary() {
@@ -12,6 +16,15 @@ function addSamary() {
   main.appendChild(main2);
 }
 
+img.addEventListener('change',function(e) {
+ let reader = new FileReader();
+ reader.onload = function(e) {
+  prev.attr('src',e.terget.result);
+  
+ 
+  }
+
+  reader.readAsDataURL(e.target.file[0]);
+  });
 
 
-// addSamary();

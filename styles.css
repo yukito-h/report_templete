@@ -28,8 +28,8 @@ main {
   display: grid;
   text-align: center;
   line-height: 2rem;
-  grid-template-columns: 700px 5px 150px 1fr;
-  grid-template-rows: 40px 40px 40px 40px 1fr 5px;
+  grid-template-columns: 600px 5px 50px 150px;
+  grid-template-rows: 40px 40px 40px 40px 135px 5px;
   grid-template-areas:
     "area0 .... area1 area2"
     "area0 .... area3 area4"
@@ -42,10 +42,11 @@ main {
 }
 
 .img {
+  justify-content:center;
   grid-area: area0;
   background: #eee;
   width: 400px;
-  height: 300px;
+  height: 295px;
   border:1px solid #000;
 }
 
@@ -97,4 +98,9 @@ main {
   grid-area: area8;
   background: rgba(0, 0, 100, 0.2);
   overflow-wrap: break-word;
+}
+
+#preview {
+width :400px;
+height:300px;
 }
